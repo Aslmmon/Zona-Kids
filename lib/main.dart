@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:zoon_kids/ui/splash/SplashScreen.dart';
+import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
 import 'package:zoon_kids/ui/welcomeStart/WelcomeScreen.dart';
 
 import 'theme/theme.dart';
@@ -24,14 +24,13 @@ class MyApp extends ConsumerWidget {
     final theme = ref.watch(themeProvider);
 
     return MaterialApp(
-      title: 'Zona Kids',
-      theme: theme,
-      home: AnnotatedRegion<SystemUiOverlayStyle>(
-          value: SystemUiOverlayStyle(
-            systemNavigationBarColor: Colors.white,
-            statusBarColor: Colors.transparent,
-          ),
-          child: WelcomeScreen()),
-    );
+        title: 'Zona Kids',
+        theme: theme,
+        home: AnnotatedRegion<SystemUiOverlayStyle>(
+            value: SystemUiOverlayStyle(
+              systemNavigationBarColor: Colors.white,
+              statusBarColor: Colors.transparent,
+            ),
+            child: WelcomeScreen()));
   }
 }

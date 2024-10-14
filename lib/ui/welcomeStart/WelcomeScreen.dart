@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/components/AppButton.dart';
+import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
 import 'package:zoon_kids/utils/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -27,8 +28,7 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'welcome to',
-                    style: TextStyle(
-                        fontSize: 24, color: Theme.of(context).hintColor),
+                    style: TextStyle(fontSize: 24, color: Theme.of(context).hintColor),
                   ),
                   SizedBox(height: 10),
                   SvgPicture.asset(zonaLogo),
@@ -42,7 +42,12 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   AppButton(
                     AppButtonText: 'Let\'s start !',
-                    onAppButtonClick: () {},
+                    onAppButtonClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
+                    },
                     AppButtonColor: Theme.of(context).hintColor,
                   )
                 ],

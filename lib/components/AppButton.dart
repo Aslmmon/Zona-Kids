@@ -9,11 +9,15 @@ class AppButton extends StatelessWidget {
     required this.AppButtonText,
     required this.onAppButtonClick,
     this.AppButtonColor = Colors.black,
+    this.height = 65,
+    this.width = 200,
   });
 
   final String AppButtonText;
   final VoidCallback onAppButtonClick;
   final Color? AppButtonColor;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +25,10 @@ class AppButton extends StatelessWidget {
         onPressed: () {
           //FlutterBeep.beep();
           AudioPlayer().play(AssetSource('audio/click_pop_button.mp3'));
-
-          onAppButtonClick;
+          onAppButtonClick();
         },
-        height: 64,
-        width: 200,
+        height: height,
+        width: width,
         backgroundColor: AppButtonColor,
         borderColor: Colors.black,
         child: Text(
