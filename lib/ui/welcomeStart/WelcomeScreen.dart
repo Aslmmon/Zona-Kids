@@ -9,32 +9,47 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 40),
-            Text(
-              'welcome to',
-              style:
-                  TextStyle(fontSize: 24, color: Theme.of(context).hintColor),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          SvgPicture.asset(
+            'assets/welcome_background.svg',
+            fit: BoxFit.cover,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 100.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'welcome to',
+                    style: TextStyle(
+                        fontSize: 24, color: Theme.of(context).hintColor),
+                  ),
+                  SizedBox(height: 10),
+                  SvgPicture.asset(zonaLogo),
+                  SizedBox(height: 120),
+                  SvgPicture.asset(rabbitLogo, width: 120, height: 210),
+                  SizedBox(height: 20),
+                  Text(
+                    'Where Learning is Fun!',
+                    style: TextStyle(
+                        fontSize: 24, color: Theme.of(context).hintColor),
+                  ),
+                  AppButton(
+                    AppButtonText: 'Let\'s start !',
+                    onAppButtonClick: () {},
+                    AppButtonColor: Theme.of(context).hintColor,
+                  )
+                ],
+              ),
             ),
-            SizedBox(height: 10),
-            SvgPicture.asset(zonaLogo),
-            SizedBox(height: 120),
-            SvgPicture.asset(rabbitLogo, width: 120, height: 210),
-            SizedBox(height: 20),
-            Text(
-              'Where Learning is Fun!',
-              style:
-                  TextStyle(fontSize: 24, color: Theme.of(context).hintColor),
-            ),
-            AppButton(AppButtonText: 'Let\'s start !', onAppButtonClick: () {})
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
