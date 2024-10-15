@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
 
 class AppNavigation {
   static navigateToDestination(BuildContext context, Widget destination) =>
@@ -8,7 +7,7 @@ class AppNavigation {
 
   static navigateToDestinationCompletely(
       BuildContext context, Widget destination) {
-    () => Navigator.pushAndRemoveUntil(
+    Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
           builder: (BuildContext context) => destination,

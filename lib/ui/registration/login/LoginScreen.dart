@@ -47,16 +47,7 @@ class LoginScreen extends StatelessWidget {
                 flex: 1,
                 child: Column(
                   children: [
-                    CircleAvatar(
-                      radius: 55,
-                      backgroundColor: Theme.of(context).highlightColor,
-                      child: Hero(
-                          tag: 'rabbit',
-                          child: SvgPicture.asset(
-                            rabbitLogo,
-                            width: 50,
-                          )),
-                    ),
+                    CircleAvatarRabbitLogo(),
                   ],
                 ),
               ),
@@ -87,10 +78,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => RegisterScreen()));
+                        AppNavigation.navigateToDestination(
+                            context, RegisterScreen());
                       },
                       child: Text(
                         'Create New User',
@@ -124,6 +113,26 @@ class LoginScreen extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class CircleAvatarRabbitLogo extends StatelessWidget {
+  const CircleAvatarRabbitLogo({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CircleAvatar(
+      radius: 55,
+      backgroundColor: Theme.of(context).highlightColor,
+      child: Hero(
+          tag: heroRabbitTag,
+          child: SvgPicture.asset(
+            rabbitLogo,
+            width: 50,
+          )),
     );
   }
 }

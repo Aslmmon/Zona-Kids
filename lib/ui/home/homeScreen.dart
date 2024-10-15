@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Hero(tag: 'rabbit', child: SvgPicture.asset(rabbitLogo)),
+          child: Hero(tag: heroRabbitTag, child: SvgPicture.asset(rabbitLogo)),
         ),
       ),
     );

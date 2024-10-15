@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 2;
+    timeDilation = 3;
 
     return Scaffold(
       body: Stack(
@@ -36,29 +36,29 @@ class WelcomeScreen extends StatelessWidget {
                     'welcome to',
                     style: TextStyle(
                         fontSize: 24, color: Theme.of(context).hintColor),
-                  ),
+                  ).provideTextAnimation,
                   SizedBox(height: 10),
-                  SvgPicture.asset(zonaLogo),
+                  SvgPicture.asset(zonaLogo).provideImageAnimation,
                   SizedBox(height: 120),
                   Hero(
-                    tag: 'rabbit',
+                    tag: heroRabbitTag,
                     child:
                         SvgPicture.asset(rabbitLogo, width: 120, height: 210),
-                  ),
+                  ).animate().fadeIn(duration: 1.seconds),
                   SizedBox(height: 20),
                   Text(
                     'Where Learning is Fun!',
                     style: TextStyle(
                         fontSize: 24, color: Theme.of(context).hintColor),
-                  ),
+                  ).provideTextAnimation,
                   AppButton(
                     AppButtonText: 'Let\'s start !',
                     onAppButtonClick: () {
-                      AppNavigation.navigateToDestination(
+                      AppNavigation.navigateToDestinationCompletely(
                           context, LoginScreen());
                     },
                     AppButtonColor: Theme.of(context).hintColor,
-                  )
+                  ).provideImageAnimation
                 ],
               ),
             ),
