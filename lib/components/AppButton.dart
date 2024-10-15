@@ -9,7 +9,7 @@ class AppButton extends StatelessWidget {
     required this.AppButtonText,
     required this.onAppButtonClick,
     this.AppButtonColor = Colors.black,
-    this.height = 65,
+    this.height = 40,
     this.width = 200,
   });
 
@@ -30,32 +30,11 @@ class AppButton extends StatelessWidget {
         height: height,
         width: width,
         backgroundColor: AppButtonColor,
-        borderColor: Colors.black,
+        borderColor: Colors.black87,
         child: Text(
           AppButtonText,
           style:
               TextStyle(color: Theme.of(context).indicatorColor, fontSize: 24),
         ));
-
-    // return Container(
-    //   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
-    //   width: MediaQuery.of(context).size.width,
-    //   height: 60,
-    //   child: ElevatedButton(
-    //     onPressed: onAppButtonClick,
-    //     child: Text(
-    //       AppButtonText,
-    //       style:
-    //           TextStyle(color: Theme.of(context).indicatorColor, fontSize: 24),
-    //     ),
-    //     style: ButtonStyle(
-    //         backgroundColor:
-    //             WidgetStateProperty.all<Color>(Theme.of(context).hintColor),
-    //         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-    //             RoundedRectangleBorder(
-    //                 borderRadius: BorderRadius.circular(15.0),
-    //                 side: BorderSide(color: Theme.of(context).dividerColor)))),
-    //   ),
-    // );
   }
 }

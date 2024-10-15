@@ -43,10 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                   AppButton(
                     AppButtonText: 'Let\'s start !',
                     onAppButtonClick: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                     },
                     AppButtonColor: Theme.of(context).hintColor,
                   )
