@@ -1,10 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zoon_kids/ui/welcomeStart/WelcomeScreen.dart';
-import 'package:zoon_kids/utils/constants.dart';
+import 'package:zoon_kids/utils/Constants.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});

@@ -3,8 +3,9 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/components/AppButton.dart';
 import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
+import 'package:zoon_kids/utils/AppNavigation.dart';
 import 'package:zoon_kids/utils/Extensions.dart';
-import 'package:zoon_kids/utils/constants.dart';
+import 'package:zoon_kids/utils/Constants.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
 class WelcomeScreen extends StatelessWidget {
@@ -40,9 +41,9 @@ class WelcomeScreen extends StatelessWidget {
                   SvgPicture.asset(zonaLogo),
                   SizedBox(height: 120),
                   Hero(
-                    tag:'rabbit',
-                    child: SvgPicture.asset(rabbitLogo, width: 120, height: 210)
-                        ,
+                    tag: 'rabbit',
+                    child:
+                        SvgPicture.asset(rabbitLogo, width: 120, height: 210),
                   ),
                   SizedBox(height: 20),
                   Text(
@@ -52,11 +53,9 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   AppButton(
                     AppButtonText: 'Let\'s start !',
-                    onAppButtonClick: () async {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                    onAppButtonClick: () {
+                      AppNavigation.navigateToDestination(
+                          context, LoginScreen());
                     },
                     AppButtonColor: Theme.of(context).hintColor,
                   )
@@ -68,5 +67,4 @@ class WelcomeScreen extends StatelessWidget {
       ),
     );
   }
-
 }
