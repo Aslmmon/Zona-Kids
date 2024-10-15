@@ -8,6 +8,7 @@ ThemeData lightTheme = ThemeData(
   hintColor: Color(0xFFFF8431),
   dividerColor: Colors.black,
   indicatorColor: Colors.white,
+  highlightColor: Color(0xFFEAE8E9),
   fontFamily: 'SummaryNotes',
   appBarTheme: const AppBarTheme(color: Colors.white),
   scaffoldBackgroundColor: Color(0xFFF5F5F5),

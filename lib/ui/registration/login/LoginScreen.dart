@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/components/AppButton.dart';
 import 'package:zoon_kids/components/AppEditText.dart';
 import 'package:zoon_kids/ui/registration/register/RegisterScreen.dart';
+import 'package:zoon_kids/utils/constants.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -34,45 +35,89 @@ class LoginScreen extends StatelessWidget {
             'assets/register_bg.svg',
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'Login Now',
-                  style: TextStyle(
-                      fontSize: 24, color: Theme.of(context).primaryColorLight),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 55,
+                      backgroundColor: Theme.of(context).highlightColor,
+                      child: Hero(
+                          tag: 'rabbit',
+                          child: SvgPicture.asset(
+                            rabbitLogo,
+                            width: 50,
+                          )),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: EditText(hintText: 'Email'),
+              ),
+              Expanded(
+                flex: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Login Now',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: Theme.of(context).primaryColorLight),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: EditText(hintText: 'Email'),
+                    ),
+                    EditText(hintText: 'Password'),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: AppButton(
+                        width: 120,
+                        AppButtonText: 'Login',
+                        onAppButtonClick: () {},
+                        AppButtonColor: Theme.of(context).primaryColorLight,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterScreen()));
+                      },
+                      child: Text(
+                        'Create New User',
+                        style: TextStyle(
+                            fontSize: 24,
+                            color: Theme.of(context).primaryColorLight),
+                      ),
+                    )
+                  ],
                 ),
-                EditText(hintText: 'Password'),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: AppButton(
-                    width: 120,
-                    AppButtonText: 'Login',
-                    onAppButtonClick: () {},
-                    AppButtonColor: Theme.of(context).primaryColorLight,
-                  ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'or continue with',
+                      style: TextStyle(color: Theme.of(context).indicatorColor),
+                    ),
+                    AppButton(
+                        AppButtonText: 'G',
+                        width: 50,
+                        AppButtonTextColor: Theme.of(context).primaryColorLight,
+                        AppButtonColor: Theme.of(context).highlightColor,
+                        onAppButtonClick: () {})
+                  ],
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()));
-                  },
-                  child: Text(
-                    'Create New User',
-                    style: TextStyle(
-                        fontSize: 24,
-                        color: Theme.of(context).primaryColorLight),
-                  ),
-                )
-              ],
-            ),
-          ),
+              )
+            ],
+          )
         ],
       ),
     );

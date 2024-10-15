@@ -10,12 +10,14 @@ class AppButton extends StatelessWidget {
     required this.onAppButtonClick,
     this.AppButtonColor = Colors.black,
     this.height = 40,
-    this.width = 200,
+    this.width = 200, this.AppButtonTextColor = Colors.white,
   });
 
   final String AppButtonText;
   final VoidCallback onAppButtonClick;
   final Color? AppButtonColor;
+  final Color? AppButtonTextColor;
+
   final double height;
   final double width;
 
@@ -34,7 +36,7 @@ class AppButton extends StatelessWidget {
         child: Text(
           AppButtonText,
           style:
-              TextStyle(color: Theme.of(context).indicatorColor, fontSize: 24),
+              TextStyle(color: AppButtonTextColor, fontSize: 24),
         ));
   }
 }

@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/components/AppButton.dart';
 import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
+import 'package:zoon_kids/utils/Extensions.dart';
 import 'package:zoon_kids/utils/constants.dart';
+import 'package:flutter/scheduler.dart' show timeDilation;
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    timeDilation = 2;
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -28,12 +33,17 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'welcome to',
-                    style: TextStyle(fontSize: 24, color: Theme.of(context).hintColor),
+                    style: TextStyle(
+                        fontSize: 24, color: Theme.of(context).hintColor),
                   ),
                   SizedBox(height: 10),
                   SvgPicture.asset(zonaLogo),
                   SizedBox(height: 120),
-                  SvgPicture.asset(rabbitLogo, width: 120, height: 210),
+                  Hero(
+                    tag:'rabbit',
+                    child: SvgPicture.asset(rabbitLogo, width: 120, height: 210)
+                        ,
+                  ),
                   SizedBox(height: 20),
                   Text(
                     'Where Learning is Fun!',
@@ -42,8 +52,11 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   AppButton(
                     AppButtonText: 'Let\'s start !',
-                    onAppButtonClick: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                    onAppButtonClick: () async {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
                     },
                     AppButtonColor: Theme.of(context).hintColor,
                   )
@@ -55,4 +68,5 @@ class WelcomeScreen extends StatelessWidget {
       ),
     );
   }
+
 }
