@@ -44,13 +44,13 @@ class WelcomeScreen extends StatelessWidget {
                     tag: heroRabbitTag,
                     child:
                         SvgPicture.asset(rabbitLogo, width: 120, height: 210),
-                  ).animate().fadeIn(duration: 1.seconds),
+                  ),
                   SizedBox(height: 20),
                   Text(
                     'Where Learning is Fun!',
                     style: TextStyle(
                         fontSize: 24, color: Theme.of(context).hintColor),
-                  ).provideTextAnimation,
+                  ),
                   AppButton(
                     AppButtonText: 'Let\'s start !',
                     onAppButtonClick: () {
@@ -58,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
                           context, LoginScreen());
                     },
                     AppButtonColor: Theme.of(context).hintColor,
-                  ).provideImageAnimation
+                  )
                 ],
               ),
             ),
