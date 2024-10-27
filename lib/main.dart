@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logging/logging.dart';
-import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
+import 'package:zoon_kids/data/network/service/ApiService.dart';
+import 'package:zoon_kids/data/providers/providers.dart';
 import 'package:zoon_kids/ui/welcomeStart/WelcomeScreen.dart';
 
 import 'ui/theme/theme.dart';
@@ -11,7 +12,12 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   _setupLogging();
-  runApp(ProviderScope(child: MyApp()));
+  final service = ApiService();
+
+  runApp(ProviderScope(
+    overrides: [serviceProvider.overrideWithValue(service)],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends ConsumerWidget {

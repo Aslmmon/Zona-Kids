@@ -1,22 +1,61 @@
 [
   {
     "id": "1",
-    "image": "/assets/circles.svg"
+    "image": "assets/images/circles.svg"
   },
   {
     "id": "2",
-    "image": "/assets/big_small.svg"
+    "image": "assets/images/big_small.svg"
   },
   {
     "id": "3",
-    "image": "/assets/human.svg"
+    "image": "assets/images/human.svg"
   },
   {
     "id": "4",
-    "image": "/assets/fish.svg"
+    "image": "assets/images/fish.svg"
   },
   {
     "id": "5",
-    "image": "/assets/fish.svg"
+    "image": "assets/images/fish.svg"
+  },
+  {
+    "id": "1",
+    "image": "assets/images/circles.svg"
+  },
+  {
+    "id": "2",
+    "image": "assets/images/big_small.svg"
+  },
+  {
+    "id": "3",
+    "image": "assets/images/human.svg"
+  },
+  {
+    "id": "4",
+    "image": "assets/images/fish.svg"
+  },
+  {
+    "id": "5",
+    "image": "assets/images/fish.svg"
+  }, {
+  "id": "1",
+  "image": "assets/images/circles.svg"
+},
+  {
+    "id": "2",
+    "image": "assets/images/big_small.svg"
+  },
+  {
+    "id": "3",
+    "image": "assets/images/human.svg"
+  },
+  {
+    "id": "4",
+    "image": "assets/images/fish.svg"
+  },
+  {
+    "id": "5",
+    "image": "assets/images/fish.svg"
   }
 ]

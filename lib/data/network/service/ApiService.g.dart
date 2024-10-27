@@ -7,8 +7,11 @@ part of 'ApiService.dart';
 // **************************************************************************
 
 String _$levelsHash() => r'4abe96c7685c91e96da5807b78220147042a7e78';
-
-/// See also [levels].
+/**
+ * ui providers
+ */
+///
+/// Copied from [levels].
 @ProviderFor(levels)
 final levelsProvider = AutoDisposeFutureProvider<List<Levels>>.internal(
   levels,

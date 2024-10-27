@@ -17,13 +17,17 @@ class ApiService implements ServiceInterface {
   @override
   Future<List<Levels>> getLevels() async {
     final levels = <Levels>[];
-    final jsonString = await rootBundle.loadString(homeLevelsApi);
-    final levelsAsList = jsonDecode(jsonString) as List;
-
-    for (final result in levelsAsList) {
-      levels.add(Levels.fromJson(result));
+    try {
+      final jsonString = await rootBundle.loadString(homeLevelsApi);
+      final levelsAsList = jsonDecode(jsonString) as List;
+      for (final result in levelsAsList) {
+        levels.add(Levels.fromJson(result));
+      }
+      await Future.delayed(
+          const Duration(seconds: 1), () => {print('getting levels')});
+    } catch (e) {
+      print('error is ${e}');
     }
-    await Future.delayed(const Duration(seconds: 1), () => {print('getting levels')});
 
     return levels;
   }

@@ -8,10 +8,10 @@ part of 'Levels.dart';
 
 Levels _$LevelsFromJson(Map<String, dynamic> json) => Levels(
       id: json['id'] as String,
-      img: json['img'] as String,
+      image: json['image'] as String,
     );
 
 Map<String, dynamic> _$LevelsToJson(Levels instance) => <String, dynamic>{
       'id': instance.id,
-      'img': instance.img,
+      'image': instance.image,
     };
