@@ -1,7 +1,6 @@
 import 'package:chiclet/chiclet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zoon_kids/components/AppButton.dart';
 import 'package:zoon_kids/utils/Constants.dart';
 
 class HomeScreen extends StatelessWidget {

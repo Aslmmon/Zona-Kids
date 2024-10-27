@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:logging/logging.dart';
 import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
 import 'package:zoon_kids/ui/welcomeStart/WelcomeScreen.dart';
 
-import 'theme/theme.dart';
+import 'ui/theme/theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
+  _setupLogging();
   runApp(ProviderScope(child: MyApp()));
 }
 
@@ -33,4 +34,11 @@ class MyApp extends ConsumerWidget {
             ),
             child: WelcomeScreen()));
   }
+}
+
+void _setupLogging() {
+  Logger.root.level = Level.ALL;
+  Logger.root.onRecord.listen((rec) {
+    print('${rec.level.name}: ${rec.time}: ${rec.message}');
+  });
 }

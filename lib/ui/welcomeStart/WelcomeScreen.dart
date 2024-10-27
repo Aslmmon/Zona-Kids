@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zoon_kids/components/AppButton.dart';
+import 'package:zoon_kids/ui/components/AppButton.dart';
 import 'package:zoon_kids/ui/registration/login/LoginScreen.dart';
 import 'package:zoon_kids/utils/AppNavigation.dart';
 import 'package:zoon_kids/utils/Extensions.dart';
@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           SvgPicture.asset(
-            'assets/welcome_background.svg',
+            welcomeBackground,
             fit: BoxFit.cover,
           ),
           Container(
@@ -36,9 +36,9 @@ class WelcomeScreen extends StatelessWidget {
                     'welcome to',
                     style: TextStyle(
                         fontSize: 24, color: Theme.of(context).hintColor),
-                  ).provideTextAnimation,
+                  ),
                   SizedBox(height: 10),
-                  SvgPicture.asset(zonaLogo).provideImageAnimation,
+                  SvgPicture.asset(zonaLogo),
                   SizedBox(height: 120),
                   Hero(
                     tag: heroRabbitTag,

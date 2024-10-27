@@ -37,15 +37,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   #  go_router: ^14.2.7
-  #  json_annotation: ^4.9.0
+  json_annotation: ^4.9.0
   #  shared_preferences: ^2.3.2
   flutter_riverpod: ^2.3.6
+
   #  chopper: ^6.1.4
   google_fonts: ^6.2.1
 #  lottie: ^3.1.2
 #  equatable: ^2.0.5
 #  scrollable_positioned_list: ^0.3.8
-#  logging: ^1.2.0
+  logging: ^1.2.0
 #  url_launcher: ^6.3.0
 #  google_mobile_ads: ^5.1.0
 #  infinite_scroll_pagination: ^4.0.0
@@ -65,10 +66,13 @@ dev_dependencies:
   #  json_serializable: ^6.7.1
   #  build_runner: ^2.4.6
   #  chopper_generator: ^6.0.3
-  # riverpod_generator: ^2.4.0
   #  hive_generator: ^2.0.0
   icons_launcher: ^3.0.0
 #  change_app_package_name: ^1.4.0
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.6
+  chopper_generator: ^6.0.3
+  riverpod_generator: ^2.4.0
 
 icons_launcher:
   image_path: "assets/play_store_zona_kids.png"
@@ -90,8 +94,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
     - assets/audio/
+    - assets/api/
+    - assets/images/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zoon_kids/components/AppButton.dart';
-import 'package:zoon_kids/components/AppEditText.dart';
+import 'package:zoon_kids/ui/components/AppButton.dart';
+import 'package:zoon_kids/ui/components/AppEditText.dart';
+import 'package:zoon_kids/utils/Constants.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -15,7 +16,7 @@ class RegisterScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           SvgPicture.asset(
-            'assets/register_bg.svg',
+            registerBackground,
             fit: BoxFit.cover,
           ),
           Padding(

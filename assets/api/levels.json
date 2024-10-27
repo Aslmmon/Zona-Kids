@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "image": "/assets/circles.svg"
+  },
+  {
+    "id": "2",
+    "image": "/assets/big_small.svg"
+  },
+  {
+    "id": "3",
+    "image": "/assets/human.svg"
+  },
+  {
+    "id": "4",
+    "image": "/assets/fish.svg"
+  },
+  {
+    "id": "5",
+    "image": "/assets/fish.svg"
+  }
+]

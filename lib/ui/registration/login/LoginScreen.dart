@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zoon_kids/components/AppButton.dart';
-import 'package:zoon_kids/components/AppEditText.dart';
+import 'package:zoon_kids/ui/components/AppButton.dart';
+import 'package:zoon_kids/ui/components/AppEditText.dart';
 import 'package:zoon_kids/ui/home/homeScreen.dart';
 import 'package:zoon_kids/ui/registration/register/RegisterScreen.dart';
 import 'package:zoon_kids/utils/Constants.dart';
@@ -35,8 +35,7 @@ class LoginScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset(
-            'assets/register_bg.svg',
+          SvgPicture.asset(registerBackground,
             fit: BoxFit.cover,
           ),
           Column(
