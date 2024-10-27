@@ -1,61 +1,27 @@
 [
   {
     "id": "1",
-    "image": "assets/images/circles.svg"
+    "image": "assets/images/circles.svg",
+    "animated_image": null
   },
   {
     "id": "2",
-    "image": "assets/images/big_small.svg"
+    "image": "assets/images/big_small.svg",
+    "animated_image": "assets/images/rabbitWithRocket.svg"
   },
   {
     "id": "3",
-    "image": "assets/images/human.svg"
+    "image": "assets/images/human.svg",
+    "animated_image": null
   },
   {
     "id": "4",
-    "image": "assets/images/fish.svg"
+    "image": "assets/images/fish.svg",
+    "animated_image": "assets/images/rabbit_winking.svg"
   },
   {
     "id": "5",
-    "image": "assets/images/fish.svg"
-  },
-  {
-    "id": "1",
-    "image": "assets/images/circles.svg"
-  },
-  {
-    "id": "2",
-    "image": "assets/images/big_small.svg"
-  },
-  {
-    "id": "3",
-    "image": "assets/images/human.svg"
-  },
-  {
-    "id": "4",
-    "image": "assets/images/fish.svg"
-  },
-  {
-    "id": "5",
-    "image": "assets/images/fish.svg"
-  }, {
-  "id": "1",
-  "image": "assets/images/circles.svg"
-},
-  {
-    "id": "2",
-    "image": "assets/images/big_small.svg"
-  },
-  {
-    "id": "3",
-    "image": "assets/images/human.svg"
-  },
-  {
-    "id": "4",
-    "image": "assets/images/fish.svg"
-  },
-  {
-    "id": "5",
-    "image": "assets/images/fish.svg"
+    "image": "assets/images/fish.svg",
+    "animated_image": null
   }
 ]
