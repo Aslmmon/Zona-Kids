@@ -23,5 +23,55 @@
     "id": "5",
     "image": "assets/images/fish.svg",
     "animated_image": null
+  },
+  {
+    "id": "6",
+    "image": "assets/images/circles.svg",
+    "animated_image": null
+  },
+  {
+    "id": "7",
+    "image": "assets/images/big_small.svg",
+    "animated_image": "assets/images/rabbitWithRocket.svg"
+  },
+  {
+    "id": "8",
+    "image": "assets/images/human.svg",
+    "animated_image": null
+  },
+  {
+    "id": "9",
+    "image": "assets/images/fish.svg",
+    "animated_image": "assets/images/rabbit_winking.svg"
+  },
+  {
+    "id": "10",
+    "image": "assets/images/fish.svg",
+    "animated_image": null
+  },
+  {
+    "id": "11",
+    "image": "assets/images/circles.svg",
+    "animated_image": null
+  },
+  {
+    "id": "12",
+    "image": "assets/images/big_small.svg",
+    "animated_image": "assets/images/rabbitWithRocket.svg"
+  },
+  {
+    "id": "13",
+    "image": "assets/images/human.svg",
+    "animated_image": null
+  },
+  {
+    "id": "14",
+    "image": "assets/images/fish.svg",
+    "animated_image": "assets/images/rabbit_winking.svg"
+  },
+  {
+    "id": "15",
+    "image": "assets/images/fish.svg",
+    "animated_image": null
   }
 ]

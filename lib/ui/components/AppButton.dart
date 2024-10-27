@@ -10,7 +10,8 @@ class AppButton extends StatelessWidget {
     required this.onAppButtonClick,
     this.AppButtonColor = Colors.black,
     this.height = 40,
-    this.width = 200, this.AppButtonTextColor = Colors.white,
+    this.width = 200,
+    this.AppButtonTextColor = Colors.white,
   });
 
   final String AppButtonText;
@@ -33,10 +34,10 @@ class AppButton extends StatelessWidget {
         width: width,
         backgroundColor: AppButtonColor,
         borderColor: Colors.black87,
+        buttonType: ChicletButtonTypes.roundedRectangle,
         child: Text(
           AppButtonText,
-          style:
-              TextStyle(color: AppButtonTextColor, fontSize: 24),
+          style: TextStyle(color: AppButtonTextColor, fontSize: 24),
         ));
   }
 }
