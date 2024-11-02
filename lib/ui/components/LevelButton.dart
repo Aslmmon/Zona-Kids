@@ -2,6 +2,8 @@ import 'package:chiclet/chiclet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/data/models/levels/Levels.dart';
+import 'package:zoon_kids/ui/quiz/QuizScreen.dart';
+import 'package:zoon_kids/utils/AppNavigation.dart';
 
 class LevelButton extends StatelessWidget {
   const LevelButton({
@@ -20,7 +22,9 @@ class LevelButton extends StatelessWidget {
       height: 100,
       borderColor: Theme.of(context).primaryColorLight,
       backgroundColor: Color(0XFF6ABBCB),
-      onPressed: () {},
+      onPressed: () {
+        AppNavigation.navigateToDestination(context, Quizscreen());
+      },
       // backgroundColor: Theme.of(context).primaryColorLight,
       child: SvgPicture.asset(level.image ?? ''),
     );
