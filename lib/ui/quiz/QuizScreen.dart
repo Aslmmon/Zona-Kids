@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/ui/components/ProgressIndicator.dart';
+import 'package:zoon_kids/ui/quiz/sound_exercise/SoundExerciseScreen.dart';
 import 'package:zoon_kids/utils/Constants.dart';
 
 class Quizscreen extends StatefulWidget {
@@ -15,7 +16,6 @@ class _QuizscreenState extends State<Quizscreen> {
   int tempPage = 0;
   var loader = SvgAssetLoader(background_quiz);
 
-
   @override
   void initState() {
     super.initState();
@@ -28,7 +28,7 @@ class _QuizscreenState extends State<Quizscreen> {
       body: SafeArea(
         child: Stack(
           children: [
-             SvgPicture.asset(loader.assetName, fit: BoxFit.cover),
+            SvgPicture.asset(loader.assetName, fit: BoxFit.cover),
             Column(
               children: [
                 ZoonaProgressIndicator(
@@ -46,7 +46,7 @@ class _QuizscreenState extends State<Quizscreen> {
                     controller: _pageControler,
                     children: [
                       for (String pages in listPages)
-                        Center(child: Text("Hello ${pages}"))
+                        Center(child: SoundExerciseScreen())
                     ],
                   ),
                 )
