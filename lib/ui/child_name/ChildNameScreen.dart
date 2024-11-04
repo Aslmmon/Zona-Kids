@@ -5,7 +5,9 @@ import 'package:zoon_kids/ui/components/AppEditText.dart';
 import 'package:zoon_kids/utils/Constants.dart';
 
 class ChildNameScreen extends StatelessWidget {
-  const ChildNameScreen({super.key});
+  const ChildNameScreen({super.key, required this.onNextClicked});
+
+  final VoidCallback onNextClicked;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class ChildNameScreen extends StatelessWidget {
                 AppButton(
                   AppButtonText: 'Next',
                   AppButtonColor: Theme.of(context).primaryColorLight,
-                  onAppButtonClick: () {},
+                  onAppButtonClick: onNextClicked,
                   width: 120,
                 )
               ],
