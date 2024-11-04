@@ -72,9 +72,7 @@ class HomeScreen extends ConsumerWidget {
                                                     MainAxisAlignment.start,
                                                 children: [
                                                   SvgPicture.asset(
-                                                    data[index]
-                                                            .animated_image ??
-                                                        '',
+                                                    data[index].animated_image ?? '',
                                                     height: 120,
                                                   ),
                                                 ],

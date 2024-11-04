@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zoon_kids/ui/components/AppButton.dart';
-import 'package:zoon_kids/ui/home/homeScreen.dart';
-import 'package:zoon_kids/utils/AppNavigation.dart';
 import 'package:zoon_kids/utils/Constants.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 

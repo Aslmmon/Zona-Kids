@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zoon_kids/ui/child_name/ChildNameScreen.dart';
+import 'package:zoon_kids/ui/home/homeScreen.dart';
 import 'package:zoon_kids/ui/splash/SplashScreen.dart';
 import 'package:zoon_kids/ui/welcomeStart/WelcomeScreen.dart';
 
@@ -32,18 +33,14 @@ class AppNavigation {
             return ChildNameScreen(
               onNextClicked: () {
                 context.go('/home');
-
               },
             );
           }),
       GoRoute(
           path: '/home',
           builder: (BuildContext context, GoRouterState state) {
-            return HomeScreen(
-
-            );
+            return HomeScreen();
           }),
-
     ],
   );
 }

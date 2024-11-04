@@ -27,27 +27,27 @@
   {
     "id": "6",
     "image": "assets/images/circles.svg",
-    "animated_image": null
+    "animated_image": "assets/images/rabbitWithRocket.svg"
   },
   {
     "id": "7",
     "image": "assets/images/big_small.svg",
-    "animated_image": "assets/images/rabbitWithRocket.svg"
+    "animated_image": null
   },
   {
     "id": "8",
     "image": "assets/images/human.svg",
-    "animated_image": null
+    "animated_image": "assets/images/rabbit_winking.svg"
   },
   {
     "id": "9",
     "image": "assets/images/fish.svg",
-    "animated_image": "assets/images/rabbit_winking.svg"
+    "animated_image": null
   },
   {
     "id": "10",
     "image": "assets/images/fish.svg",
-    "animated_image": null
+    "animated_image": "assets/images/rabbitWithRocket.svg"
   },
   {
     "id": "11",

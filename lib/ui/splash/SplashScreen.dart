@@ -12,13 +12,6 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
-    // new Future.delayed(
-    //     const Duration(seconds: 3),
-    //     () => Navigator.push(
-    //           context,
-    //           MaterialPageRoute(builder: (context) => WelcomeScreen()),
-    //         ));
-
     super.initState();
   }
 
