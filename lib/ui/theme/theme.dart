@@ -5,11 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColorLight: Color(0xFF3D94A8),
+  primaryColor: Color(0XFF6ABBCB),
   hintColor: Color(0xFFFF8431),
   dividerColor: Colors.black,
   indicatorColor: Colors.white,
   highlightColor: Color(0xFFEAE8E9),
-  fontFamily: 'SummaryNotes',
+  fontFamily: 'SuperHappy',
   appBarTheme: const AppBarTheme(color: Colors.white),
   scaffoldBackgroundColor: Color(0xFFF5F5F5),
   inputDecorationTheme: const InputDecorationTheme(
@@ -20,7 +21,9 @@ ThemeData lightTheme = ThemeData(
   textTheme: TextTheme(
       titleLarge: GoogleFonts.poppins(fontSize: 20.0),
       titleMedium: GoogleFonts.poppins(fontSize: 16.0),
-      titleSmall: GoogleFonts.poppins(fontSize: 14.0)),
+      titleSmall: GoogleFonts.poppins(fontSize: 14.0),
+      labelMedium: GoogleFonts.poppins(
+          fontSize: 22, color: Color(0xFFFF8431), fontWeight: FontWeight.bold)),
   // ... other light theme properties
 );
 
@@ -42,8 +45,8 @@ ThemeData darkTheme = ThemeData(
 );
 
 class ThemeProvider extends StateNotifier<ThemeData> {
-  ThemeProvider()
-      : super( lightTheme);
+  ThemeProvider() : super(lightTheme);
+
   // final SharedPreferences? pref;
 
   void toggleTheme(bool isDarkTheme) {
@@ -54,8 +57,8 @@ class ThemeProvider extends StateNotifier<ThemeData> {
     // pref?.setBool('isDarkTheme', isDarkTheme);
     return isDarkTheme ? darkTheme : lightTheme;
   }
-
 }
+
 //
 final themeProvider = StateNotifierProvider<ThemeProvider, ThemeData>(
   (ref) => ThemeProvider(),

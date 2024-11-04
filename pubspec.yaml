@@ -113,9 +113,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: SummaryNotes
+    - family: SuperHappy
       fonts:
-        - asset: fonts/summary_notes.ttf
+        - asset: fonts/super_happy.otf
 
   #  fonts:
   #    - family: Bold

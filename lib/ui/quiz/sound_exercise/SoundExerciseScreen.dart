@@ -11,14 +11,19 @@ class SoundExerciseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text('What is the animal'),
+        Text(
+          'What is the animal ?',
+          style: Theme.of(context).textTheme.labelMedium,
+        ),
         ChicletOutlinedAnimatedButton(
           width: 50,
           height: 100,
           buttonType: ChicletButtonTypes.circle,
+          backgroundColor: Theme.of(context).primaryColor,
+          borderColor: Theme.of(context).primaryColorLight,
           child: SvgPicture.asset(playSound),
           onPressed: () {},
         ),
@@ -39,9 +44,7 @@ class SoundExerciseScreen extends StatelessWidget {
                               color: Theme.of(context).primaryColorLight)),
                     );
                   },
-                )
-                )),
-        AppButton(AppButtonText: 'Next', onAppButtonClick: () {})
+                ))),
       ],
     );
   }

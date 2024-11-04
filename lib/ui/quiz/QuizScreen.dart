@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zoon_kids/ui/components/AppButton.dart';
 import 'package:zoon_kids/ui/components/ProgressIndicator.dart';
 import 'package:zoon_kids/ui/quiz/sound_exercise/SoundExerciseScreen.dart';
 import 'package:zoon_kids/utils/Constants.dart';
@@ -39,7 +40,6 @@ class _QuizscreenState extends State<Quizscreen> {
                   child: PageView(
                     onPageChanged: (page) {
                       setState(() {
-                        tempPage = page;
                         percentage = page / listPages.length;
                       });
                     },
@@ -48,6 +48,14 @@ class _QuizscreenState extends State<Quizscreen> {
                       for (String pages in listPages)
                         Center(child: SoundExerciseScreen())
                     ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: AppButton(
+                    AppButtonText: 'Next',
+                    onAppButtonClick: () {},
+                    AppButtonColor: Theme.of(context).primaryColorLight,
                   ),
                 )
               ],

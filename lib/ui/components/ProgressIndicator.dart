@@ -31,7 +31,10 @@ class ZoonaProgressIndicator extends StatelessWidget {
           linearStrokeCap: LinearStrokeCap.roundAll,
           progressColor: Theme.of(context).primaryColorLight,
         ),
-        Text('${tempPage}/${listPages.length}'),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Text('${tempPage}/${listPages.length}'),
+        ),
       ],
     );
   }

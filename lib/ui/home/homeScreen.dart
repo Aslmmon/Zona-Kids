@@ -29,7 +29,7 @@ class HomeScreen extends ConsumerWidget {
             child: ChicletOutlinedAnimatedButton(
               onPressed: () {},
               padding: EdgeInsets.all(5),
-              backgroundColor: Color(0XFF6ABBCB),
+              backgroundColor: Theme.of(context).primaryColor,
               borderColor: Theme.of(context).primaryColorLight,
               width: MediaQuery.of(context).size.width,
               child: Row(
