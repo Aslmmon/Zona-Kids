@@ -11,7 +11,7 @@ class EditText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 250,
+      width: 150,
       child: TextField(
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(

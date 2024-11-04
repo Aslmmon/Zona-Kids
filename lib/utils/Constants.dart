@@ -9,3 +9,5 @@ const rabbitRocket = 'assets/images/rabbitWithRocket.svg';
 const background_quiz = 'assets/images/background_quiz.svg';
 const playSound = 'assets/images/play_sound.svg';
 const heroRabbitTag = 'rabbit';
+const rabbitBorder = 'assets/images/rabbit_border.svg';
+const bgChildScreen = 'assets/images/bg_child.svg';

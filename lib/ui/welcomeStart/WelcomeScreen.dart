@@ -7,7 +7,9 @@ import 'package:zoon_kids/utils/Constants.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  const WelcomeScreen({super.key, required this.onNextClicked});
+
+  final VoidCallback onNextClicked;
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   AppButton(
                     AppButtonText: 'Let\'s start !',
-                    onAppButtonClick: () {
-                      AppNavigation.navigateToDestinationCompletely(
-                          context, HomeScreen());
-                    },
+                    onAppButtonClick: onNextClicked,
                     AppButtonColor: Theme.of(context).hintColor,
                   )
                 ],
